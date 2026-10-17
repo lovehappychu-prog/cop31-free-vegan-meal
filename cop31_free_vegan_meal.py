@@ -67,6 +67,10 @@ reservation_type = st.radio(
 if reservation_type == "Individual Meal Reservation":
     st.info("One free vegan meal per person per day.")
 
+elif reservation_type == "Group Meal Request":
+    st.info(
+        "Group meal requests are subject to GNPA confirmation."
+    )
 
 st.markdown("### Your Information")
 
@@ -79,7 +83,3 @@ job_title = st.text_input(
 organization = st.text_input(
     "Organization / Institution *"
 )
-elif reservation_type == "Group Meal Request":
-    st.info(
-        "Group meal requests are subject to GNPA confirmation."
-    )
