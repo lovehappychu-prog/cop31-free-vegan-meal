@@ -94,3 +94,19 @@ meal_date = st.date_input(
     "Meal Date *",
     value=None
 )
+
+st.info("Pickup Location: To Be Announced")
+
+
+st.write("Meal Quantity: 1 meal per person per day.")
+
+st.caption(
+    "GNPA protects your privacy. "
+    "Your information is used only for meal coordination "
+    "and our plant-based mission."
+)
+
+st.warning(
+    "Reservations are not yet open. "
+    "This form is currently for preview only."
+)
