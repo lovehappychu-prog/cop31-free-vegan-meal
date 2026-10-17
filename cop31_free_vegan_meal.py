@@ -89,3 +89,8 @@ email = st.text_input("Email Address *")
 phone = st.text_input("Phone Number *")
 
 country = st.text_input("Country *")
+
+meal_date = st.date_input(
+    "Meal Date *",
+    value=None
+)
