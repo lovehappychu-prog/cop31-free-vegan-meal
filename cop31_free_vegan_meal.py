@@ -87,3 +87,5 @@ organization = st.text_input(
 email = st.text_input("Email Address *")
 
 phone = st.text_input("Phone Number *")
+
+country = st.text_input("Country *")
