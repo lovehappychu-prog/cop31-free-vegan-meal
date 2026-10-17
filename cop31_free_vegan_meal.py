@@ -45,3 +45,29 @@ st.markdown("""
 
 </div>
 """, unsafe_allow_html=True)
+
+
+
+st.divider()
+
+st.markdown("## Free Vegan Meal Reservation")
+
+st.write(
+    "Welcome to the COP31 Free Vegan Meal reservation page."
+)
+
+reservation_type = st.radio(
+    "Please select your reservation type:",
+    [
+        "Individual Meal Reservation",
+        "Group Meal Request"
+    ]
+)
+
+if reservation_type == "Individual Meal Reservation":
+    st.info("One free vegan meal per person per day.")
+
+elif reservation_type == "Group Meal Request":
+    st.info(
+        "Group meal requests are subject to GNPA confirmation."
+    )
