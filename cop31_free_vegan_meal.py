@@ -1,4 +1,36 @@
-)
+import streamlit as st
+from datetime import date
+
+st.set_page_config(page_title="COP31 Free Vegan Meal | GNPA", layout="centered")
+
+# Keep this False until GNPA has tested all booking and privacy safeguards.
+RESERVATIONS_OPEN = False
+
+st.markdown("""
+<style>
+.stApp { background-color: #FAFAF7; }
+.block-container { max-width: 800px; padding-top: 90px; }
+</style>
+""", unsafe_allow_html=True)
+
+st.markdown("""
+<div style="text-align:center;">
+<div style="color:#2F765D;font-size:26px;font-weight:800;letter-spacing:6px;">GNPA</div>
+<div style="color:#123047;font-size:13px;margin-top:8px;">
+Global Nature &amp; Plant-based Diet Shift Agency
+</div>
+<h1 style="color:#123047;font-size:44px;margin-top:70px;">COP31 Free Vegan Meal</h1>
+</div>
+""", unsafe_allow_html=True)
+
+st.divider()
+st.markdown("## Free Vegan Meal Reservation")
+st.write("Welcome to the COP31 Free Vegan Meal reservation page.")
+
+reservation_type = st.radio(
+    "Please select your reservation type:",
+    ["Individual Meal Reservation", "Group Meal Request"],
+    )
 
 if reservation_type == "Individual Meal Reservation":
     st.info("One free vegan meal per person per day.")
@@ -54,6 +86,3 @@ with st.form("cop31_preview_form"):
     )
     st.warning("Reservations are not yet open. This form is currently for preview only.")
     st.form_submit_button("Reservations Not Yet Open", disabled=True)
-
-
-
