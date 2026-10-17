@@ -83,3 +83,7 @@ job_title = st.text_input(
 organization = st.text_input(
     "Organization / Institution *"
 )
+
+email = st.text_input("Email Address *")
+
+phone = st.text_input("Phone Number *")
