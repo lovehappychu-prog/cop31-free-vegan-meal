@@ -138,7 +138,8 @@ if page.startswith('Meal Reservation'):
             notes = st.text_area('Additional Information (optional)')
         else:
             st.write('Meal Quantity: 1')
-        st.info('Pick-up Point: C2 Entrance, white sofa area on the right.')
+        st.info('Pick-up Point: Please collect your meal outside the entrance or exit due to newly announced access restrictions.')
+
         st.caption('Your information is used for meal coordination. / 資料僅供餐點安排使用。')
         enabled = PUBLIC_OPEN or test_authorized
         submitted = st.form_submit_button('Submit reservation' if PUBLIC_OPEN else ('Submit TEST reservation' if enabled else 'Reservations Not Yet Open'), disabled=not enabled)
